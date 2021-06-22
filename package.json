@@ -1,0 +1,27 @@
+{
+  "name": "vite-plugin-moment-to-dayjs",
+  "version": "1.0.0",
+  "description": "Day.js vite plugin for Ant Design (antd)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dayjs",
+    "vite",
+    "moment"
+  ],
+  "author": "shoo_be_doo",
+  "license": "MIT",
+  "peerDependencies": {
+    "dayjs": "*"
+  },
+  "homepage": "https://github.com/shoo-be-doo/vite-plugin-moment-to-dayjs",
+  "bugs": {
+    "url": "https://github.com/shoo-be-doo/vite-plugin-moment-to-dayjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shoo-be-doo/vite-plugin-moment-to-dayjs"
+  }
+}
