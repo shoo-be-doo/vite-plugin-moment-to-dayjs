@@ -1,4 +1,4 @@
-#vite-plugin-antd-dayjs
+# vite-plugin-antd-dayjs
 一个 Day.js 的 Vite 插件，用于替换 Ant Design 的 Moment.js。
 
 ## Usage 使用方法
