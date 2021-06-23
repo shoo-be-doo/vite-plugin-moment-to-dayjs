@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-moment-to-dayjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Day.js vite plugin for Ant Design (antd)",
   "main": "src/index.js",
   "scripts": {
