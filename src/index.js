@@ -30,8 +30,8 @@ const presets = {
   }
 }
 
-function vitePluginMomentToDayjs(config = { preset: 'antd' }) {
-  const { preset, plugins } = config;
+function vitePluginMomentToDayjs(config = {}) {
+  const { preset = 'antdv3', plugins } = config;
   let dayjsPlugins = [];
   if (preset && presets[preset]) {
     dayjsPlugins = presets[preset].plugins;
