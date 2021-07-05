@@ -51,10 +51,30 @@ function vitePluginMomentToDayjs(config = {}) {
       };
     },
 
+    resolveId(id) {
+      if (id.includes('moment.js')) {
+        return id
+      }
+    },
+
     load(id) {
+      // 开发时
       if (id.includes('moment.js')) {
         // 导入 moment 时，将代码改为导入 dayjs 和使用到的插件
         let code = `import dayjs from 'dayjs';`;
+
+        dayjsPlugins.forEach((plugin) => {
+          code += `import ${plugin} from 'dayjs/esm/plugin/${plugin}';dayjs.extend(${plugin});`;
+        });
+
+        code += `export default dayjs;`;
+        return code;
+      }
+
+      // 编译时的id
+      if (id.includes('dayjs.min.js')) {
+        // 导入 moment 时，将代码改为导入 dayjs 和使用到的插件
+        let code = `import dayjs from 'dayjs/esm/index';`;
 
         dayjsPlugins.forEach((plugin) => {
           code += `import ${plugin} from 'dayjs/esm/plugin/${plugin}';dayjs.extend(${plugin});`;
